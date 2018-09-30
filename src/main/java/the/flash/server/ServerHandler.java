@@ -16,6 +16,9 @@ import java.util.Date;
  * @author chao.yu
  * chao.yu@dianping.com
  * @date 2018/08/04 06:21.
+ *
+ * TODO: 服务端没有对客户端登录情况进行校验
+ * TODO: 服务端没有对消息的合法性进行校验(即魔数校验)
  */
 public class ServerHandler extends ChannelInboundHandlerAdapter {
 
