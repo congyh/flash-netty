@@ -8,6 +8,7 @@ import java.util.Map;
 import java.util.concurrent.ConcurrentHashMap;
 
 public class SessionUtil {
+    // TODO: 这里的channelMap是全局共享的, 但是如果是多个服务器的话, 就不行了, 是否需要考虑使用外部存储等
     private static final Map<String, Channel> userIdChannelMap = new ConcurrentHashMap<>();
 
     public static void bindSession(Session session, Channel channel) {
