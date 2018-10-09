@@ -41,6 +41,8 @@ public class NettyClient {
                 });
 
         // 4.建立连接
+        // TODO: 若服务端通过自动递增绑定技术启动了, 理论上客户端也是不能够直接指定一个固定的端口的.
+        //      实际使用中客户端可能是需要通过动态获取配置来获取要连接的端口的.
         connect(bootstrap, "juejin.im", 80, MAX_RETRY);
     }
 
